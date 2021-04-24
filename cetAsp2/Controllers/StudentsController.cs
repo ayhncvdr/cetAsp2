@@ -58,7 +58,7 @@ namespace cetAsp2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Surname,Department,BirthDate,Height,Weight")] Student student)
+        public async Task<IActionResult> Create([Bind("Id,Name,Surname,Department,BirthDate,Height,Weight,Age")] Student student)
         {
             
 
@@ -97,7 +97,7 @@ namespace cetAsp2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Surname,Department,BirthDate,Height,Weight")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Surname,Department,BirthDate,Height,Weight,Age")] Student student)
         {
             
             if (id != student.Id)

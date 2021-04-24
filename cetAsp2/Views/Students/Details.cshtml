@@ -38,7 +38,12 @@
             Age
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Age)
+            @{ var year = DateTime.Now.Year;
+                var birthyear = Model.BirthDate.Year;
+                var age = (year - birthyear);
+                }
+            @age
+           @*@Model.CreationDate - @Model.BirthDate*@
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Height)
@@ -56,7 +61,9 @@
             @Html.DisplayNameFor(model => model.CreationDate)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CreationDate)
+            @{ var creationdate = Model.CreationDate;}
+            @creationdate
+            @*@Html.DisplayFor(model => model.CreationDate)*@
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.LastUpdateDate)

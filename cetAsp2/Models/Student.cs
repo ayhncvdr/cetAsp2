@@ -10,7 +10,8 @@ namespace cetAsp2.Models
     {
         public Student()
         {
-            
+            CreationDate = DateTime.Now;
+            Age = DateTime.Now.Year - BirthDate.Year;
             
             
 
